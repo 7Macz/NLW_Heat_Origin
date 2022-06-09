@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruno Gonçalves - DoWhile 2022</title>
+
+    <script src="assets/js/script.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="assets/image/build.svg" alt="Selo Rocketseat" />
+          </span>
+          <img src="http://lorempixel.com.br/180/180/6" alt="Foto pessoal" />
+        </div>
+        <h1 id="userName">Bruno Gonçalves</h1>
+        <a href="http://instagram.com/bruuno_goncalves">
+          <img src="assets/image/github.svg" alt="Ícone github" />7Macz
+        </a>
+        <p>An instructor focused on helping pople start programming for web</p>
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="http://youtube.com.br" target="_blank"
+              ><img src="assets/image/youtube.svg" alt="Ícone youtube"
+            /></a>
+          </li>
+          <li class="instagram">
+            <a href="http://instagram.com.br/bruuno_goncalves" target="_blank"
+              ><img src="assets/image/instagram.svg" alt="Ícone instagram"
+            /></a>
+          </li>
+          <li class="facebook">
+            <a href="http://facebook.com.br" target="_blank"
+              ><img src="assets/image/facebook.svg" alt="Ícone facebook"
+            /></a>
+          </li>
+          <li class="twitter">
+            <a href="http://twitter.com.br" target="_blank"
+              ><img src="assets/image/twitter.svg" alt="Ícone twitter"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script>
+      const LinksSocialMedia = {
+        github: "7Macz",
+        youtube: "UCbaBFO9Z7BDaoq4i-Wbg_ng",
+        facebook: "bruno.goncalves.50",
+        instagram: "bruuno_goncalves",
+        twitter: "Bruuno_Gon",
+      };
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute("class");
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`;
+
+          alert(li.children[0].href);
+        }
+      }
+
+      changeSocialMediaLinks();
+    </script>
+  </body>
+</html>
