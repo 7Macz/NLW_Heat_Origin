@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bruno Gonçalves - DoWhile 2022</title>
 
-    <script src="assets/js/script.js"></script>
+    
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -26,11 +26,11 @@
           </span>
           <img src="http://lorempixel.com.br/180/180/6" alt="Foto pessoal" />
         </div>
-        <h1 id="userName">Bruno Gonçalves</h1>
-        <a href="http://instagram.com/bruuno_goncalves">
+        <h1 id="userName">Bruno Gon</h1>
+        <a id="userLink" href="https://github.com/7Macz/">
           <img src="assets/image/github.svg" alt="Ícone github" />7Macz
         </a>
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="userBio">An instructor focused on helping pople start programming for web</p>
         <ul id="socialLinks">
           <li class="youtube">
             <a href="http://youtube.com.br" target="_blank"
@@ -55,27 +55,6 @@
         </ul>
       </div>
     </main>
-
-    <script>
-      const LinksSocialMedia = {
-        github: "7Macz",
-        youtube: "UCbaBFO9Z7BDaoq4i-Wbg_ng",
-        facebook: "bruno.goncalves.50",
-        instagram: "bruuno_goncalves",
-        twitter: "Bruuno_Gon",
-      };
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute("class");
-
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`;
-
-          alert(li.children[0].href);
-        }
-      }
-
-      changeSocialMediaLinks();
-    </script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
